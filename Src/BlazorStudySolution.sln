@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy", "BlazorStudy\BlazorStudy.csproj", "{3EA20546-16C1-47A9-A0D3-842237B7011C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.Shared", "BlazorStudy.Shared\BlazorStudy.Shared.csproj", "{E8AC0F10-6168-4376-AECC-3606588634C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.Web", "BlazorStudy.Web\BlazorStudy.Web.csproj", "{83E0F154-7E3E-4CD1-8EBF-05AB52F27111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.Web.Client", "BlazorStudy.Web.Client\BlazorStudy.Web.Client.csproj", "{5B59E330-748D-44BB-AC50-7BB8C02AB635}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{5AF6AA94-B274-46F7-ADCA-864A360328B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{439F7B90-5CB1-43C8-B268-C4167F6010D0}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doc\changelog.md = ..\Doc\changelog.md
+		..\Doc\technology.md = ..\Doc\technology.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EA20546-16C1-47A9-A0D3-842237B7011C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA20546-16C1-47A9-A0D3-842237B7011C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA20546-16C1-47A9-A0D3-842237B7011C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3EA20546-16C1-47A9-A0D3-842237B7011C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA20546-16C1-47A9-A0D3-842237B7011C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8AC0F10-6168-4376-AECC-3606588634C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AC0F10-6168-4376-AECC-3606588634C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AC0F10-6168-4376-AECC-3606588634C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AC0F10-6168-4376-AECC-3606588634C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E0F154-7E3E-4CD1-8EBF-05AB52F27111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E0F154-7E3E-4CD1-8EBF-05AB52F27111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E0F154-7E3E-4CD1-8EBF-05AB52F27111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E0F154-7E3E-4CD1-8EBF-05AB52F27111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{439F7B90-5CB1-43C8-B268-C4167F6010D0} = {5AF6AA94-B274-46F7-ADCA-864A360328B7}
+	EndGlobalSection
+EndGlobal

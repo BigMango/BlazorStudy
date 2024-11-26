@@ -1,0 +1,118 @@
+﻿@page "/Counter"
+@using System.Diagnostics
+@using AntDesign;
+<Title Level="2">RGB Led Color</Title>
+<Divider />
+<div>
+    <Row>
+        <Col Span="16">
+        <Row>
+            <Col Span="12">
+            <Slider TValue="double" Min="0" Max="255" @bind-Value="@colorRed" OnAfterChange="OnColorChanged" />
+            </Col>
+            <Col Span="4">
+            <AntDesign.InputNumber Min="0" Max="255" Style="margin:0 16px;" @bind-Value="@colorRed" TValue="double" OnAfterChange="OnColorChanged" />
+            </Col>
+        </Row>
+        <Row>
+            <Col Span="12">
+            <Slider TValue="double" Min="0" Max="255" @bind-Value="@colorGreen" OnAfterChange="OnColorChanged" />
+            </Col>
+            <Col Span="4">
+            <AntDesign.InputNumber Min="0" Max="255" Style="margin:0 16px;" @bind-Value="@colorGreen" TValue="double" OnAfterChange="OnColorChanged" />
+            </Col>
+        </Row>
+        <Row>
+            <Col Span="12">
+            <Slider TValue="double" Min="0" Max="255" @bind-Value="@colorBlue" OnAfterChange="OnColorChanged" />
+            </Col>
+            <Col Span="4">
+            <AntDesign.InputNumber Min="0" Max="255" Style="margin:0 16px;" @bind-Value="@colorBlue" TValue="double" OnAfterChange="OnColorChanged" />
+            </Col>
+        </Row>
+        </Col>
+        <Col Span="4">
+            <div style="width:50px;height:50px;background-color:@GetColor2()">sss</div>
+        </Col>
+    </Row>
+</div>
+<div>
+</div>
+
+@code {
+    private int currentCount = 0;
+    private double colorRed = 0;
+    private double colorGreen = 0;
+    private double colorBlue = 0;
+    AntDesign.Slider<byte> sdRed;
+    AntDesign.Slider<byte> sdGreen;
+    AntDesign.Slider<byte> sdBlue;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void OnColorChanged(double obj)
+    {
+        UpdateColor();
+    }
+
+    private void OnRedChanged(double obj)
+    {
+        // UpdateColor();
+    }
+    private void OnGreenChanged(double obj)
+    {
+
+    }
+    private void OnBlueChanged(double obj)
+    {
+
+    }
+
+    HttpClient httpClient = new HttpClient();
+    object lockObject = false;
+    public async Task UpdateColor()
+    {
+        lock (lockObject)
+        {
+            if (!(bool)lockObject)
+            {
+                lockObject = true;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        // string colorStr = $"{sdRed.Value:X2}{sdGreen.Value:X2}{sdBlue.Value:X2}";
+        try
+        {
+            string colorStr = GetColor();
+            var result = await httpClient.GetStringAsync($"http://192.168.0.134/ws82xx/SetColor?color={colorStr}");
+            Debug.WriteLine(result);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        finally
+        {
+            lockObject = false;
+        }
+    }
+
+    private string GetColor2()
+    {
+        return $"#{(int)colorRed:X2}{(int)colorGreen:X2}{(int)colorBlue:X2}";
+    }
+
+    private string GetColor()
+    {
+        return $"{(int)colorRed:X2}{(int)colorGreen:X2}{(int)colorBlue:X2}";
+    }
+
+}
