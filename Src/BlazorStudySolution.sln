@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy", "BlazorStudy\BlazorStudy.csproj", "{3EA20546-16C1-47A9-A0D3-842237B7011C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.Maui", "BlazorStudy\BlazorStudy.Maui.csproj", "{3EA20546-16C1-47A9-A0D3-842237B7011C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.Shared", "BlazorStudy.Shared\BlazorStudy.Shared.csproj", "{E8AC0F10-6168-4376-AECC-3606588634C8}"
 EndProject
@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{439F7B90-5CB
 		..\Doc\changelog.md = ..\Doc\changelog.md
 		..\Doc\technology.md = ..\Doc\technology.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStudy.WinForm", "BlazorStudy.Web.WinForm\BlazorStudy.WinForm.csproj", "{1E1D79D1-8881-439C-82DA-59414C638716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B59E330-748D-44BB-AC50-7BB8C02AB635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1D79D1-8881-439C-82DA-59414C638716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1D79D1-8881-439C-82DA-59414C638716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1D79D1-8881-439C-82DA-59414C638716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1D79D1-8881-439C-82DA-59414C638716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
