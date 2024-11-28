@@ -26,5 +26,5 @@ public static class Startup
 #if DEBUG
         services.AddBlazorWebViewDeveloperTools();
 #endif
-    }
+    }   
 }
