@@ -1,7 +1,25 @@
 ﻿@page "/"
 @using AntDesign;
+@using BlazorStudy.Shared.Services
+@inject IFormFactor FormFactor
 <h1>Hello, world!</h1>
 
-<Text Type="success"></Text>Welcome to your new app.
 <Button Type="primary">Hello World!</Button>
-@* <img src="images/logo.png" /> *@
+<img src="images/logo.png" class="img" alt="My image" />
+Welcome to your new app running on <em>@factor</em> using <em>@platform</em>. 
+@code {
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+
+    private string GetImage()
+    {
+        switch (factor)
+        {
+            case "web":
+                break;
+        }
+
+        return null;
+    }
+
+}

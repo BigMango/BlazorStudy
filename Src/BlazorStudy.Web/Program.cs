@@ -1,3 +1,5 @@
+using BlazorStudy.Shared.Services;
+using BlazorStudy.Web.Client.Services;
 using BlazorStudy.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 builder.Services.AddAntDesign();
+builder.Services.AddSingleton<IFormFactor,BlazorStudy.Web.Services.FormFactor>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

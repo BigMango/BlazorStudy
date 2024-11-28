@@ -1,4 +1,6 @@
 ﻿using AntDesign.ProLayout;
+using BlazorStudy.Services;
+using BlazorStudy.Shared.Services;
 using Microsoft.Extensions.Logging;
 
 namespace BlazorStudy
@@ -19,6 +21,14 @@ namespace BlazorStudy
 
             //注入AntDesign
             builder.Services.AddAntDesign();
+
+            builder.Services.AddSingleton<IFormFactor,FormFactor>();
+
+            builder.Services.AddInteractiveStringLocalizer();
+            builder.Services.AddLocalization(options =>
+            {
+                options.ResourcesPath = "Resources";
+            });
             //基本配置
             builder.Services.Configure<ProSettings>(settings =>
             {
@@ -27,7 +37,7 @@ namespace BlazorStudy
                 settings.ContentWidth = "Fluid";
                 settings.FixedHeader = false;
                 settings.FixSiderbar = true;
-                settings.Title = "DotNet宝藏库";
+                settings.Title = "Blazor 一窍不通";
                 settings.PrimaryColor = "daybreak";
                 settings.ColorWeak = false;
                 settings.SplitMenus = false;
